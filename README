@@ -1,0 +1,54 @@
+objekt_EmbSpace_v_embspy
+
+
+
+                'actions':   ['./word2vec/bin/word2vec -train {dependencies} -output {targets} -size ' + size + ' -window 10 -sample 1e-4 -negative 10 -hs 0 -binary 0 -cbow 0'],
+
+teď máme 512
+
+
+
+
+ca = component analysis matice v numpy
+
+ca_df = totéž jako pandas dataframe
+sloupce jsou C23 pro komponentu 23
+řádky jsou indexovaný slovníkem
+
+ca_wegihts = váhy transformace
+vectors = původní vektory
+vocab = slovník
+
+
+from embs import *
+pickle.load(..ica.. open, rb)
+
+
+
+
+osy_latex.py
+
+ica file -> tex -> pdf
+
+
+
+
+billion_data.tex
+
+
+
+
+https://docs.google.com/spreadsheets/d/1n7NvX7wJMV4WJGBjZmXsAhVSv8hqKjd5424C2HTIkd4/edit#gid=0
+
+
+
+Další poznámky:
+
+data_milion
+
+dodo.py pro doit
+
+tasks_billion_ica_je_pickle
+
+tasks_billion_ica2_je_jinej_randseed
+
