@@ -52,3 +52,34 @@ tasks_billion_ica_je_pickle
 
 tasks_billion_ica2_je_jinej_randseed
 
+billion.txt
+30 301 028 lines
+
+pro celej fajl a jednu komponentu to na ganymedovi trvá 4 minuty:
+
+
+2021-11-20 22:28:19 Will compute PMI for words in 3-.konec.txt on first 100000000 lines from billion.txt corpus
+2021-11-20 22:28:19 Reading in the component....
+2021-11-20 22:28:19 The component contains 75 words.
+2021-11-20 22:28:19 Reading in the corpus and calculating word and word pair counts....
+2021-11-20 22:32:19 We have read in 768648884 tokens, 2425337 unique words.
+2021-11-20 22:32:19 We have pairs for 75 of the 75 words of the component.
+2021-11-20 22:32:19 Calculating PMIs....
+2021-11-20 22:32:19 We have calculated PMI for 146984 candidate neighbouring words.
+2021-11-20 22:32:19 Averaging PMIs....
+2021-11-20 22:32:22 Sorting candidates by average PMIs....
+2021-11-20 22:32:23 The best scoring candidate label is: "David"
+2021-11-20 22:32:23 Printing out top 10 candidates...
+David 576.3001922290531
+his 284.2939592840502
+; 278.3869355477917
+who 277.3612871340682
+, 274.53304214413316
+'s 272.5038114180148
+( 267.2330654722576
+) 266.86849231004476
+with 261.38844548431223
+he 260.4468371170025
+2021-11-20 22:32:23 Done
+
+
