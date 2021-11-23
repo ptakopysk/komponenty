@@ -11,7 +11,7 @@ tex2txt:
 	mkdir -p $(COMPONENTSDIR)
 	./tex2txt.py $(COMPONENTSDIR) < billion_data.tex
 
-PMIDIR=depot/pmi
+PMIDIR=depot/pmi1M
 
 N=1000000
 
@@ -27,4 +27,9 @@ txt2pmi:
 		> $(PMIDIR)/$$(basename $$f).$N.out \
 		2> $(PMIDIR)/$$(basename $$f).$N.err \
 		; done
+
+interesting_pmi:
+	for f in $$(ls $(PMIDIR)/*.out|sort -n -t/ -k3); do ./filter_pmi.py $$f | tee $@; done
+
+
 

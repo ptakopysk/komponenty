@@ -6,8 +6,8 @@
 #$ -t 1-512
 #
 # !!! Memory limit
-#$ -l h_data=1g
-#$ -l mem_free=1g
+#$ -l h_data=2g
+#$ -l mem_free=2g
 #
 # Run in this directory
 #$ -cwd
