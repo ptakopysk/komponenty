@@ -29,7 +29,8 @@ txt2pmi:
 		; done
 
 interesting_pmi:
-	for f in $$(ls $(PMIDIR)/*.out|sort -n -t/ -k3); do ./filter_pmi.py $$f | tee $@; done
+	-rm $@
+	for f in $$(ls $(COMPONENTSDIR)/$P|sort -n -t/ -k3); do ./filter_pmi.py $(PMIDIR)/$$(basename $$f).out $$f | tee -a $@; done
 
 
 

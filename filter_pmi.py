@@ -13,11 +13,13 @@ logging.basicConfig(
 # so if there is anything interesting anywhere, it is BEFORE these words
 # (i.e. stop searching once you reach these)
 stopwords = {"and", ",", ".", "the", "for", "in", "of", "a", "to", "'s",
-        "with", "(", ")", "at", "through", "by", "of"}
+        "with", "(", ")", "at", "through", "by", "of",
+        "into", "on", "who", "from", "an", ":", '"', "'"}
 
 words = list()
 
 filename=sys.argv[1]
+componentfilename=sys.argv[2]
 
 with open(filename) as infile:
     for line in infile:
@@ -27,9 +29,17 @@ with open(filename) as infile:
         else:
             words.append(word)
 
-# if words:
-name = filename.split('/')[-1]
-component = name.split('.')[0]
-print(component, *words)
+with open(componentfilename) as infile:
+    sample = ' '.join(infile.read().split()[:7])
+
+component = filename.split('/')[-1].split('.')[0]
+
+if words:
+    words = ' '.join(words)
+    print(f'\n{component}:\t{words}\t({sample})\n')
+else:
+    print(f'{component}:\t                  \t({sample})')
+
+
 
 
