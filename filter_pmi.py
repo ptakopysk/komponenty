@@ -14,7 +14,8 @@ logging.basicConfig(
 # (i.e. stop searching once you reach these)
 stopwords = {"and", ",", ".", "the", "for", "in", "of", "a", "to", "'s",
         "with", "(", ")", "at", "through", "by", "of",
-        "into", "on", "who", "from", "an", ":", '"', "'"}
+        "into", "on", "who", "from", "an", ":", '"', "'",
+        ";", "-"}
 
 words = list()
 
