@@ -13,14 +13,18 @@ tex2txt:
 
 PMIDIR=depot/pmi
 
-N=1000
+N=1000000
+
+T=20
+
+P=*[+-]konec.txt
 
 txt2pmi:
 	mkdir -p $(PMIDIR)
-	for f in $(COMPONENTSDIR)/?[+-]*.txt; do \
+	for f in $(COMPONENTSDIR)/$P; do \
 		echo Computing PMI for $$(basename $$f); \
-		./compute_pmi.py -n $N -c $$f \
-		> $(PMIDIR)/$$(basename $$f).out \
-		2> $(PMIDIR)/$$(basename $$f).err \
+		./compute_pmi.py -n $N -t $T -c $$f \
+		> $(PMIDIR)/$$(basename $$f).$N.out \
+		2> $(PMIDIR)/$$(basename $$f).$N.err \
 		; done
 

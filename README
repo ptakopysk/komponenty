@@ -83,3 +83,22 @@ he 260.4468371170025
 2021-11-20 22:32:23 Done
 
 
+"konec" je asi lepší než "nej"
+
+leze tam hodně stopwords a punctuation, ale záleží co je tam kromě toho...
+
+stops co jsou častý:
+and , . the for in of a to 's with ( ) at through by of
+
+...zajímá mě jen to co se dostane před tyhle stopwords!
+Hehe takže to jsou stopwords v novym významu že jak se k nim dostanu tak se
+mam zastavit :-)
+
+1M už vypúadá obvykle vcelku použitelně
+
+TODO plný 100M, to bud asi ještě lepší ale bude se to počítat dlouho
+
+top 20 jistě stačí
+
+
+
